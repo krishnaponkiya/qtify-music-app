@@ -1,26 +1,15 @@
-
-import React from "react";
 import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
 import Button from "../Button/Button";
-import  styles from "./Navbar.module.css";
+import styles from "./Navbar.module.css";
 
-const Navbar = () => {
-  const handleFeedback = () => {
-    alert("Thank you for your feedback!");
-  };
-
+// img.parentElement.parentElement must be this <nav> (the tests measure the logo against it)
+export default function Navbar() {
   return (
-    <nav className="{styles.navbar}">
+    <nav className={styles.navbar}>
       <Logo />
-
       <Search />
-
-      <Button
-        text="Give Feedback"
-      />
+      <Button>Give Feedback</Button>
     </nav>
   );
-};
-
-export default Navbar;
+}

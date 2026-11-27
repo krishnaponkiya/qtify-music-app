@@ -1,36 +1,24 @@
+import Chip from "@mui/material/Chip";
+import styles from "./Card.module.css";
 
-import React from "react";
-import { Card as MuiCard, CardContent, CardMedia, Chip, Typography } from "@mui/material";
-import styles from  "./Card.module.css";
+// type "album" -> "<n> Follows", type "song" -> "<n> Likes"
+export default function Card({ data, type = "album" }) {
+  const { image, title, follows, likes } = data;
+  const label = type === "song" ? `${likes} Likes` : `${follows} Follows`;
 
-const Card = ({ album }) => {
   return (
-    <MuiCard className="{styles.album-card}">
-      <div className="{styles.album-image-container}">
-        <CardMedia
-          component="img"
-          image={album.image}
-          alt={album.title}
-          className="album-image"
-        />
+    <div className={styles.wrapper}>
+      <div className={styles.card}>
+        <img className={styles.image} src={image} alt={title} loading="lazy" />
+        <div className={styles.banner}>
+          <Chip
+            label={label}
+            size="small"
+            sx={{ backgroundColor: "var(--color-black)", color: "var(--color-white)", fontFamily: "Poppins", fontSize: 10, height: 22 }}
+          />
+        </div>
       </div>
-
-      <CardContent className="{styles.album-card-content}">
-        <Chip
-          label={`${album.follows} Follows`}
-          size="small"
-          className="{styles.album-chip}"
-        />
-
-        <Typography
-          variant="body1"
-          className="{styles.album-title}"
-        >
-          {album.title}
-        </Typography>
-      </CardContent>
-    </MuiCard>
+      <p className={styles.title}>{title}</p>
+    </div>
   );
-};
-
-export default Card;
+}

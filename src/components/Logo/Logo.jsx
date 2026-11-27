@@ -1,12 +1,9 @@
-import React from "react";
-import logo from "../../assets/qtify-logo.svg";
+import logo from "../../assets/logo.svg";
 
-const Logo = () => {
+export default function Logo() {
   return (
-    <div className="logo">
-      <img src={logo} alt="QTify Logo" />
-    </div>
+    <a href="/" style={{ display: "flex", alignItems: "center" }}>
+      <img src={logo} alt="QTify logo" width={100} height={34} />
+    </a>
   );
-};
-
-export default Logo;
+}

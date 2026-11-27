@@ -1,0 +1,19 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  padding: 40px 32px;
+  background-color: var(--color-black); /* tests expect a near-black background here */
+  color: var(--color-white);
+}
+.text h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .hero { flex-direction: column; text-align: center; gap: 24px; }
+  .text h1 { font-size: 28px; }
+}

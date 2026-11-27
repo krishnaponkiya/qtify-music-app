@@ -1,0 +1,16 @@
+.wrapper { position: relative; }
+.placeholder { width: 159px; height: 1px; }
+.navButton {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.left { left: 0; }
+.right { right: 0; }

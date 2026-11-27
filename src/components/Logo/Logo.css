@@ -3,6 +3,53 @@
   align-items: center;
   justify-content: center;
   margin-left: 10px;
+  position: absolute;
+width: 67px;
+height: 34px;
+left: 32px;
+top: 20px;
+
+
+
+/* Q tify */
+
+position: absolute;
+width: 60px;
+height: 24px;
+left: 39px;
+top: 30px;
+
+font-family: 'Avenir Next Condensed';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 24px;
+/* identical to box height, or 100% */
+letter-spacing: 1px;
+
+color: #FFFFFF;
+
+
+
+/*  */
+
+position: absolute;
+width: 28px;
+height: 24px;
+left: 32px;
+top: 20px;
+
+font-family: 'Font Awesome 6 Pro';
+font-style: normal;
+font-weight: 900;
+font-size: 28px;
+line-height: 24px;
+/* identical to box height, or 86% */
+letter-spacing: 1px;
+
+color: #121212;
+
+
 }
 
 .logo img {
@@ -11,3 +58,6 @@
   display: block;
   margin: 0;
 }
+
+/* Group 3748 */
+

@@ -18,7 +18,6 @@ const Navbar = () => {
 
       <Button
         text="Give Feedback"
-        onClick={handleFeedback}
       />
     </nav>
   );
